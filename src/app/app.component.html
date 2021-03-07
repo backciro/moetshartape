@@ -1,0 +1,46 @@
+<div class="title">
+  <span>
+    moetshertape
+  </span>
+</div>
+
+<div class="main_photo">
+  <span [class]="reachedObj">
+    <img src="https://res.cloudinary.com/hejjyiew1/image/upload/c_scale,w_700/v1542387481/amvqrysxx5kom8m2zvsi.jpg" (click)="increment()" [class]="bounce">
+  </span>
+  <span id="secret" *ngIf="reachedObj === 'reached'" style="max-height: 200px;">
+    <img src="https://res.cloudinary.com/hejjyiew1/image/upload/v1525181934/ipgotvffexof19vyskql.png">
+  </span>
+</div>
+
+<div class="counter">
+  <span>
+    {{ this.counterize(this.counter) }}
+  </span>
+  <span id="placeholder">
+    88888888
+  </span>
+</div>
+
+<span id="dl" style="max-height: 200px;" [class]="bounce">
+  <div *ngIf="reachedObj === 'reached'" class="dl-wrap">
+   <dl-button [src]='fileUri'></dl-button>
+  </div>
+</span>
+
+
+<div class="footer">
+  <span id="footer">
+      yung Glasond x SSC &copy; 2019
+  </span>
+</div>
+
+<div *ngIf="reachedObj === 'notReached'" class="glitchBox">
+  <div class="glitch" data-text="click me">
+
+    <span class="glitch__color glitch__color--red">click me</span>
+    <span class="glitch__color glitch__color--blue">click me</span>
+    <span class="glitch__color glitch__color--green">click me</span>
+    <span class="glitch__main">click me</span>
+  </div>
+</div>

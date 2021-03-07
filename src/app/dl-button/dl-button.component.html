@@ -1,0 +1,14 @@
+<div class="download-wrap">
+  <div [class]="status">
+    <a href="#" class="button-download" (click)="toggleStat()">
+      <span *ngIf="status === 'download'">download</span>
+      <span *ngIf="status === 'download is-done'">downloaded! 💿</span>
+      <span class="icon-wrap" *ngIf="status !== 'download is-done'">
+        <i class="icon-download"></i>
+      </span>
+    </a>
+    <div class="meter">
+      <span class="meter-progress"></span>
+    </div>
+  </div>
+</div>

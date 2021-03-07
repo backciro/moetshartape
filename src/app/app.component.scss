@@ -1,0 +1,237 @@
+.title{
+  font-family: monospace;
+  position: relative;
+  margin: auto;
+  text-align: center;
+  margin-top: 50px;
+  font-size: 25px;
+  letter-spacing: 10px;
+  
+  opacity: 0;
+  animation: fadeIn 1s ease-in both;
+  color: invert(darken(whitesmoke, 15%));
+  
+  &::after{
+    content: '(yung Glasond)';
+    position: absolute;
+    font-size: 14px;
+    bottom: -23px;
+    left: 0;
+    right: 0;
+  }
+}
+.main_photo{
+  font-family: alarm-clock;
+  position: relative;
+  margin: auto;
+  text-align: center;
+  margin-top: 75px;
+  border-radius: 4px;
+  
+  img{
+    opacity:.88;
+    max-width: 305px;
+    max-height: 305px;
+    
+    transform: translatey(0px);
+    animation: float 6s ease-in-out infinite;
+    
+    transition: opacity .23s ease;
+    -webkit-transition: opacity .23s ease;
+    -moz-transition: opacity .23s ease;
+    -ms-transition: opacity .23s ease;
+    -o-transition: opacity .23s ease;
+    border-radius: 4px;
+    
+    &:hover {
+      cursor: pointer;
+      opacity:1;
+    }
+  }
+  
+  opacity: 0;
+  animation: fadeIn 1s ease-in both;
+}
+.counter{
+  font-family: alarm-clock;
+  
+  position: relative;
+  margin: auto;
+  text-align: center;
+  margin-top: 25px;
+  font-size: 25px;
+  letter-spacing: 2px;
+  color: invert(darken(whitesmoke, 15%));
+  
+  opacity: 0;
+  animation: fadeIn 1s ease-in both;
+  // background: rgba(0, 0, 0, 0.35);
+  width: fit-content;
+  border-radius: 4px;
+  padding: 3px 3px 0 7px;
+  
+  span {
+    z-index: 10;
+  }
+  
+  #placeholder {
+    display: table;
+    margin-top: -29px;
+    color: invert(hsla(0, 0%, 74%, .23));
+    z-index: -10 !important;
+  }
+}
+
+#dl {
+  &>img {
+    width: 155px;
+    opacity: 0.67;
+    margin: auto;
+    margin-top: 42px;
+    
+    filter: saturate(25%);
+    
+    -webkit-animation: floatr 2s ease-in-out infinite;
+    animation: floatr 2s ease-in-out infinite;
+    
+    border-radius: 4px;
+    display: flex;
+    
+    transition: opacity .23s ease;
+    -webkit-transition: opacity .23s ease;
+    -moz-transition: opacity .23s ease;
+    -ms-transition: opacity .23s ease;
+    -o-transition: opacity .23s ease;
+    
+    &:hover{
+      opacity: 1;
+      cursor: pointer;
+    }
+  }
+}
+.footer{
+  $padding-value: 4px;
+  $height-value: 40px;
+  $width-value: 100%;
+  
+  position: fixed;
+  bottom: 0;
+  
+  opacity:0;
+  animation: fadeIn 1s ease-in both;
+  
+  display: block;
+  text-align: center;
+  font-family: monospace;
+  font-size: 12px;
+  height: calc($height-value/2);
+  padding: 4px 0;
+  width: $width-value;
+  color: invert(darken(whitesmoke, 15%));
+  // background-color: rgba(0, 0, 0, 0.35);
+}
+.glitchBox {
+  position: relative;
+  top: -80px;
+  left: 100px;
+  
+  opacity:0;
+  animation: fadeIn 1s ease-in both;
+}
+
+.bounce {
+  animation: bounce .2s ease-in both 1 !important;
+}
+#secret {
+  animation: fadeInSecret 5s ease-in 1 !important;
+  
+  &img:hover {
+    cursor: cell !important;
+  }
+}
+
+div:nth-of-type(1) {
+  animation-delay: .2s;
+}
+div:nth-of-type(2) {
+  animation-delay: .6s;
+}
+div:nth-of-type(3) {
+  animation-delay: 1s;
+}
+div:nth-of-type(4) {
+  animation-delay: 1.4s;
+}
+div:nth-of-type(5) {
+  animation-delay: 1.8s !important;
+}
+
+.reached {
+  display: none !important;
+  opacity: 0 !important;
+}
+.glitch {
+  animation: glitch-skew 4s cubic-bezier(.25, .46, .45, .94) 4s infinite;
+  font-family: monospace;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+  position: relative;
+  text-align: center;
+  text-transform: lowercase;
+  transform-origin: center top;
+  
+  &__main {
+    color: invert(darken(whitesmoke, 15%));
+  }
+  
+  &__color {
+    height: 100%;
+    left: 0;
+    opacity: 0.8;
+    position: absolute;
+    top: 0;
+    transform-origin: center center;
+    width: 100%;
+    z-index: -1;
+    
+    &--red {
+      animation: glitch 300ms cubic-bezier(.25, .46, .45, .94) infinite;
+      color: #95b6d1;
+    }
+    
+    &--blue {
+      animation: glitch 300ms cubic-bezier(.25, .46, .45, .94) infinite reverse;
+      color: #be9bd6;
+    }
+    
+    &--green {
+      animation: glitch 300ms cubic-bezier(.25, .46, .45, .94) 100ms infinite;
+      color: #c7ceb6;
+    }
+  }
+  
+  &__line {
+    animation: glitch-line 2s linear infinite;
+    background: #000;
+    content: '';
+    height: 1px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    
+    &--first {
+      animation: glitch-line 2s linear infinite;
+    }
+    
+    &--second {
+      animation: glitch-line 1s linear 1s infinite;
+    }
+  }
+}
+
+.dl-wrap {
+  margin-top: 30px;
+}
